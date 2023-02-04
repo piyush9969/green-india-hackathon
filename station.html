@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 50px;
+
+        }
+        .map{
+            border: 2px solid black;
+            height: 500px;
+            width: 500px;
+            margin-left:60% ;
+        }
+        p{ width: fit-content;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: left;
+            background:linear-gradient(#568203,#8cc751);
+        }
+        .cont{
+            top: 100px;
+            width: 50 px;
+            display: block;
+            position: relative;
+            
+
+        }
+        .message{
+            width: fit-content;
+            position: absolute;
+            top: 300px;
+            left: 100px;
+        }
+        body{
+            background-image: url(station.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+    <h1>Stations<span id="name" onload="letters"> </span></h1>
+    <p>Charge your Vehicles by 
+        nearest charging
+        station.</p>
+    </div>
+    <div class="message">
+        <p>GO GREEN , STAY CHEAP</p>
+        <p>LOVE NATURE</p>
+    </div>
+    <div class="map">
+    <iframe src="mapi.html" frameborder="0" height="500px" width="500px" ></iframe>
+</div>
+<script>
+    
+    var i=0;
+
+     var arr="Charge FastestCharge AffordableReady to goLove Nature";
+    var speed=50;
+    function typeWriter(){
+        if(i<arr.length){
+            document.getElementById('name').innerHTML+=txt.charAt(i);
+            i++;
+        
+            setTimeout(trpeWriter,speed);
+    }
+    }
+        
+        
+    
+    setInterval(letters,2000);
+</script>
+</body>
+</html>
